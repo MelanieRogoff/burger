@@ -4,7 +4,7 @@ connection.query('SELECT * FROM burgers', function (err, res) {
     console.log("Burger Name: " + res[0].burger_name, "Devoured: " + res[0].devoured);
 })
 
-const burgerFunctions = {
+const burger = {
  selectAll: function() {
     const select = "SELECT * FROM burgers";
     
@@ -37,4 +37,4 @@ const burgerFunctions = {
         })
 }
 }
-module.exports = burgerFunctions; //export the burgerFunctions object of functions
+module.exports = burger; //export the burger object of functions

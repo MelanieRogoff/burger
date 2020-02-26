@@ -1,25 +1,16 @@
-const burgerFunctions = require("./../config/orm"); //importing the ORM
+const burger = require("./../config/orm"); //importing the ORM
 
-burgerFunctions.selectAll()
+burger.selectAll()
     .then(function(data) {
         console.log(data);
     })
-    .catch(function(err) {
-        console.log(err);
-    });
 
-burgerFunctions.insertOne("Veggie Burger", false)
+burger.insertOne("Kosher Veggie Burger", true)
     .then(function(data) {
         console.log(data);
     })
-    .catch(function(err) {
-        console.log(err);
-    });
 
-burgerFunctions.updateOne(true, "Veggie Burger") 
-    .then(function(data) { //now seems to add & update veggie burgers - needs fixing
+burger.updateOne(false, "Kosher Veggie Burger") 
+    .then(function(data) { 
         console.log(data);
     })
-    .catch(function(err){
-        console.log(err);
-    });
