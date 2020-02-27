@@ -10,14 +10,12 @@ $(function() {
         $.ajax("/api/burgers/" + id, { //UPDATE request
             type: "PUT",
             data: newlyDevouredState
-        }). then(
-            function() {
+        }). then(function() {
                 console.log("Changed devoured state to", newlyDevoured);
                 location.reload(); //this reloads page w/updated value
             }
         )
     });
-});
 
 $(".create-form").on("submit", function(event) {
     event.preventDefault();
@@ -29,10 +27,11 @@ $(".create-form").on("submit", function(event) {
     $.ajax("/api/burgers", { //CREATING NEW BURGER
         type: "POST", 
         data: newBurger
-    }). then(
-        function() {
+    }). then(function() {
             console.log("Created a new burger!");
             location.reload();
         }
     );
+});
+
 });
