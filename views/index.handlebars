@@ -2,11 +2,10 @@
 
 <img id="burgerPic" src="../img/burger.png">
 
-
 <ul>
   {{#each burger}}
     {{#unless devoured}}
-      {{burger devoured=true}}
+      {{> burgers/burgers-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,7 +13,7 @@
 <ul>
   {{#each burger}}
     {{#if devoured}}
-      {{burger devoured=false}}
+      {{> burgers/burgers-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
