@@ -11,7 +11,6 @@ $(function() {
             type: "PUT",
             data: newlyDevouredState
         }). then(function() {
-                console.log("Changed devoured state to", newlyDevoured);
                 location.reload(); //this reloads page w/updated value
             }
         )
@@ -28,7 +27,6 @@ $(".create-form").on("submit", function(event) {
         type: "POST", 
         data: newBurger
     }). then(function() {
-            console.log("Created a new burger!");
             location.reload();
         }
     );

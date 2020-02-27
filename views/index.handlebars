@@ -3,8 +3,6 @@
 <img id="burgerPic" src="../img/burger.png">
 
 
-<h2 id="toBeDevoured">Burgers Waiting To Be Devoured</h2>
-
 <ul>
   {{#each burger}}
     {{#unless devoured}}
@@ -12,8 +10,6 @@
     {{/unless}}
   {{/each}}
 </ul>
-
-<h2 id="burgersDevoured">Burgers Devoured</h2>
 
 <ul>
   {{#each burger}}
@@ -27,9 +23,20 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burg">Burger Name:</label>
+    <label for="burg"></label>
     <input type="text" id="burg" name="name">
   </div>
+
+  <button id="burgerBtn" type="submit">Submit</button>
+</form>
+
+
+
+<!-- 1. When user hits submit, the burger name must appear as textbox in left
+        - It must have a corresponding "Devour it!" button
+
+     2. When user hits "Devour it!", burger name must move to right + remove btn   
+
 
   <div class="form-group">
     <label for="devour">Devour It!</label><br>
@@ -37,5 +44,4 @@
     <input type="radio" name="devoured" value="0"> Not yet devoured!
   </div>
 
-  <button id="burgerBtn" type="submit">Add Burger</button>
-</form>
+-->
