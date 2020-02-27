@@ -1,6 +1,9 @@
-<h1>Eat-Da-Burger!</h1>
+<h1 id="title">Eat-Da-Burger!</h1>
 
-<h2>Burgers Waiting To Be Devoured</h2>
+<img id="burgerPic" src="../img/burger.png">
+
+
+<h2 id="toBeDevoured">Burgers Waiting To Be Devoured</h2>
 
 <ul>
   {{#each burger}}
@@ -10,7 +13,7 @@
   {{/each}}
 </ul>
 
-<h2>Burgers Devoured</h2>
+<h2 id="burgersDevoured">Burgers Devoured</h2>
 
 <ul>
   {{#each burger}}
@@ -20,7 +23,7 @@
   {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
+<h3 id="burgerAdd">Add a Burger</h3>
 <form class="create-form">
 
   <div class="form-group">
@@ -34,5 +37,5 @@
     <input type="radio" name="devoured" value="0"> Not yet devoured!
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button id="burgerBtn" type="submit">Add Burger</button>
 </form>
