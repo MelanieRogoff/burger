@@ -3,9 +3,9 @@
 <h2>Burgers Waiting To Be Devoured</h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
     {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
+      {{burger devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,9 +13,9 @@
 <h2>Burgers Devoured</h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
     {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
+      {{burger devoured=false}}
     {{/if}}
   {{/each}}
 </ul>

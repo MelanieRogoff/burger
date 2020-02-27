@@ -1,40 +1,24 @@
 const connection = require('./connection'); 
 
-connection.query('SELECT * FROM burgers', function (err, res) {
-    console.log("Burger Name: " + res[0].burger_name, "Devoured: " + res[0].devoured);
-})
+const orm = {
 
-const burger = {
- selectAll: function() {
-    const select = "SELECT * FROM burgers";
-    
-    return new Promise(function(resolve, reject) {
-        connection.query(select, function(err, data) {
-            if (err) reject (err);
-            resolve(data);
-        });
+selectAll: function(tableName, cb) {  //have to do ?? because it's a table
+    connection.query("SELECT * FROM ??", [tableName], function(err, data) {
+        cb(data); //need to do a callback to send the data to the models
     })
 },
-    insertOne: function(burger_name, devoured) {
-        const inserts = `INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)`;
-
-        return new Promise(function(resolve, reject) {
-            connection.query(inserts, [burger_name, devoured], function(err, data) {
-                if (err) reject (err);
-                resolve(data);
-            });
-        })
+insertOne: function(tableName, col1Name, col2Name, val1, val2, cb) {
+    const inserts = 'INSERT INTO ?? (??, ??) VALUES (?, ?)';
+        connection.query(inserts, [tableName, col1Name, col2Name, val1, val2], function(err, data) {
+            cb(data); //need to do a callback to send the data to the models
+        });   
 },
-
-    updateOne: function(devoured, burger_name) { //setting devoured to be true here
-        const updates = `UPDATE burgers SET devoured = ? WHERE burger_name = ?`;
-
-        return new Promise(function(resolve, reject) {
-            connection.query(updates, [devoured, burger_name], function(err, data) {
-                if (err) reject (err);
-                resolve(data);
-            });
-        })
+updateOne: function(tableName, col2Name, col2Val, col1Name, col1Val, cb) { //setting devoured to be true here
+    const updates = 'UPDATE ?? SET ?? = ? WHERE ?? = ?'; //ALWAYS SET TO TRUE B/C OF DEVOUR IT BUTTON
+        connection.query(updates, [tableName, col2Name, col2Val, col1Name, col1Val], function(err, data) {
+           cb(data); //need to do a callback to send the data to the models
+        });
+    }
 }
-}
-module.exports = burger; //export the burger object of functions
+
+module.exports = orm; 

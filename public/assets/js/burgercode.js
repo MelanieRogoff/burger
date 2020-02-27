@@ -1,4 +1,3 @@
-
 $(function() {
     $(".change-devoured").on("click", function (event) {
         const id = $(this).data("id");
@@ -7,7 +6,7 @@ $(function() {
         const newlyDevouredState = {
             devoured: newlyDevoured
         };
-
+        
         //Do PUT (Update) request
 
         $.ajax("/api/burgers/" + id, {
@@ -27,12 +26,11 @@ $(".create-form").on("submit", function(event) {
 
     const newBurger = {
         name: $("#burg").val().trim(),
-        devoured: $("[names=devoured]:checked").val().trim()
+        devoured: $("[names=devoured]:checked").val()
     };
+    console.log(newBurger);
 
-    //POST request
-
-    $.ajax("/api/burgers", {
+    $.ajax("/api/burgers", { //POST request
         type: "POST", 
         data: newBurger
     }). then(

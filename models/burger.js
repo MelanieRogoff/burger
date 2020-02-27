@@ -1,16 +1,24 @@
-const burger = require("./../config/orm"); //importing the ORM
+const orm = require("./../config/orm"); //importing the ORM
 
-burger.selectAll()
-    .then(function(data) {
-        console.log(data);
-    })
+const burger = {
+    selectAll: function(cb) {
+        orm.selectAll("burgers", function(res) {
+            cb (res); //we need to put function(res) for the cb so it'll call back the res
+        })
+    },
 
-burger.insertOne("Kosher Veggie Burger", true)
-    .then(function(data) {
-        console.log(data);
-    })
+    insertOne: function(col1Name, col2Name, val1, val2, cb) {
+        //don't put exact names b/c the controller does that 
+        orm.insertOne("burgers", col1Name, col2Name, val1, val2, function(res) {
+            cb(res);
+        }) 
+    },
 
-burger.updateOne(false, "Kosher Veggie Burger") 
-    .then(function(data) { 
-        console.log(data);
-    })
+    updateOne: function(col2Name, col2Val, col1Name, col1Val, cb) {
+        orm.updateOne("burgers", col2Name, col2Val, col1Name, col1Val, function(res) {
+            cb(res);
+        })
+    }
+}
+
+module.exports = burger;
