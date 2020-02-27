@@ -1,4 +1,4 @@
-const orm = require("./../config/orm"); //importing the ORM
+const orm = require("../config/orm"); //importing the ORM
 
 const burger = {
     selectAll: function(cb) {
