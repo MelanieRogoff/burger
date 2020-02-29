@@ -1,5 +1,5 @@
 $(function() {
-    $(".change-devoured").on("click", function (event) {
+    $("toBeDevoured").on("click", function (event) {
         event.preventDefault();
         const id = $(this).data("id");
         const newlyDevoured = $(this).data("newlyDevoured");
@@ -20,7 +20,7 @@ $(".create-form").on("submit", function(event) {
     event.preventDefault();
     const newBurger = {
         name: $("#burg").val().trim(),
-        devoured: $("[name=devoured]:checked").val()
+        devoured: false
     };
 
     $.ajax("/api/burgers", { //CREATING NEW BURGER

@@ -14,12 +14,13 @@ router.get('/', function(req, res) {  //READ
 
 router.post("/api/burgers", function(req, res) { //CREATE
 
-    burger.insertOne("burger_name", "devoured", req.body.name, req.body.devoured, function(result) {
+    burger.insertOne("burger_name", "devoured", req.body.name, false, function(result) { //need to put false here instead of req.body b/c it's in burgercode it saves as a string and putting here makes sure that it's not a string (can't be a string)
         if (result.affectedRows == 0) {
             return res.status(404).end(); //if no rows changed, throw 404 error
         } else {
             res.status(200).end()
         }
+        console.log(result)
     });
 });
 
