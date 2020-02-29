@@ -3,6 +3,7 @@
 <img id="burgerPic" src="../img/burger.png">
 
 <ul>
+    <h2 id="toTheLeft">Burgers to be Devoured</h2>
   {{#each burger}}
     {{#unless devoured}}
       {{> burgers/burgers-block devoured=true}}
@@ -11,6 +12,7 @@
 </ul>
 
 <ul>
+    <h2 id="toTheRight">Devoured Burgers</h2>
   {{#each burger}}
     {{#if devoured}}
       {{> burgers/burgers-block devoured=false}}
@@ -28,19 +30,3 @@
 
   <button id="burgerBtn" type="submit">Submit</button>
 </form>
-
-
-
-<!-- 1. When user hits submit, the burger name must appear as textbox in left
-        - It must have a corresponding "Devour it!" button
-
-     2. When user hits "Devour it!", burger name must move to right + remove btn   
-
-
-  <div class="form-group">
-    <label for="devour">Devour It!</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not yet devoured!
-  </div>
-
--->

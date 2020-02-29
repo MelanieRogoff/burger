@@ -14,14 +14,24 @@ body {
 
 #burgerAdd { /*Add a Burger Text*/
     margin-left: 470px;
-    margin-top: 30px; 
+    margin-top: 90px; 
 }
 
-.form-group {
+.form-group { /*The input box*/
     margin-left: 470px;
   }
 
-#burgerBtn {
+#burgerBtn { 
     margin-top: 10px;
     margin-left: 500px;
+}
+
+#toTheRight { /*Devoured Burgers Area*/
+    text-align: right;
+    margin-top: -120px;
+    margin-right: 100px;
+}
+
+#toTheLeft { /*Burgers To Be Devoured*/
+    text-align: left;
 }
