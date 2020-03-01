@@ -12,31 +12,35 @@ body {
     text-align: center;
 }
 
-#burgerBtn { 
-    margin-top: 10px;
+#burgerBtn {  /*Submit button*/
+    position: fixed;
+    margin-top: 180px;
     margin-left: 500px;
 }
 
 #toTheRight { /*Devoured Burgers Area*/
     text-align: right;
     margin-right: 200px;
-    margin-top: -270px;
+    margin-top: -270px !important;
 }
 
 #toTheLeft { /*Burgers To Be Devoured*/
     text-align: left;
 }
 
-#music {
-    margin-top: 80px;
+.music {
+    margin-top: 280px !important;
     margin-left: 370px;
 }
 
 #burgerAdd { /*Add a Burger Text*/
+    position: fixed;
     margin-left: 470px;
-    margin-top: 70px; 
+    margin-top: 120px !important; 
 }
 
 .form-group { /*The input box*/
+    position: fixed;
+    margin-top: 150px !important;
     margin-left: 470px !important;
 }
