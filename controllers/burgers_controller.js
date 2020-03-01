@@ -20,14 +20,13 @@ router.post("/api/burgers", function(req, res) { //CREATE
         } else {
             res.status(200).end()
         }
-        console.log(result)
     });
 });
 
 router.put("/api/burgers:id", function(req, res) { //UPDATE
     const conditionVal = req.params.id; //condition grabs the id column AND its value
-
-    burger.updateOne("devoured", req.body.devoured, "id", conditionVal, function(result) {     
+    
+    burger.updateOne("devoured", req.body.devoured, "id", conditionVal, function(result) {    
         if (result.changedRows == 0) {//do changedRows here because of the update
             return res.status(404).end(); //if no rows changed, throw 404 error
         } else {
