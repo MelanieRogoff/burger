@@ -5,7 +5,7 @@ body {
 #burgerPic {
     height: 110px;
     width: 110px;
-    margin-left: 470px;
+    margin-left: 520px;
 }
 
 #title {
@@ -17,7 +17,7 @@ ul {
 }
 #burgerBtn {  /*Submit button*/
     margin-top: 20px;
-    margin-left: 500px;
+    margin-left: 550px;
 }
 
 .toTheRight { /*Devoured Burgers Area*/
@@ -32,16 +32,16 @@ ul {
 }
 
 #music {
-    margin-top: 30px !important;
-    margin-left: 370px;
+    margin-top: 50px;
+    margin-left: 420px;
 }
 
 #burgerAdd { /*Add a Burger Text*/
-    margin-left: 470px;
-    margin-top: 80px;
+    margin-left: 520px;
+    margin-top: 40px;
 }
 
 .form-group { /*The input box*/
     margin-top: 20px;
-    margin-left: 470px !important;
+    margin-left: 520px !important;
 }
