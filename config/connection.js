@@ -1,9 +1,9 @@
 const mysql = require("mysql"); //this page connects Node to MySQL
  
-if(process.env.JAWSDB_URL){
+if (process.env.JAWSDB_URL){
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-    const connection = mysql.createConnection({
+    connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
