@@ -6,8 +6,7 @@ $(function() {
         const newlyDevoured = $(this).data();
         const newlyDevouredState = {
             devoured: newlyDevoured
-        };
-        
+        };    
         $.ajax("/api/burgers" + id, { //UPDATE request
             type: "PUT",
             data: newlyDevouredState
@@ -16,7 +15,7 @@ $(function() {
             }
         )
     });
-
+    
 $(".create-form").on("submit", function(event) {
     event.preventDefault();
     const newBurger = {

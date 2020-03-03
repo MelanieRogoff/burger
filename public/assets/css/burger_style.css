@@ -12,19 +12,22 @@ body {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
 #burgerBtn {  /*Submit button*/
     position: fixed;
     margin-top: 180px;
     margin-left: 500px;
 }
 
-#toTheRight { /*Devoured Burgers Area*/
+.toTheRight { /*Devoured Burgers Area*/
     text-align: right;
     margin-right: 200px;
     margin-top: -270px !important;
 }
 
-#toTheLeft { /*Burgers To Be Devoured*/
+.toTheLeft { /*Burgers To Be Devoured*/
     text-align: left;
 }
 

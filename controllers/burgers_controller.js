@@ -1,6 +1,6 @@
 const express = require("express");
 const burger = require("../models/burger.js");
-const router = express.Router(); //creating the router connection
+const router = express.Router();
 
 //ROUTES
 router.get('/', function(req, res) {  //READ
@@ -14,7 +14,7 @@ router.get('/', function(req, res) {  //READ
 
 router.post("/api/burgers", function(req, res) { //CREATE
 
-    burger.insertOne("burger_name", "devoured", req.body.name, false, function(result) { //need to put false here instead of req.body b/c it's in burgercode it saves as a string and putting here makes sure that it's not a string (can't be a string)
+    burger.insertOne("burger_name", "devoured", req.body.name, false, function(result) { //need  false instead of req.body b/c it's in burgercode it saves as a string & putting here ensures it's not a string (can't be a string)
         if (result.affectedRows == 0) {
             return res.status(404).end(); //if no rows changed, throw 404 error
         } else {

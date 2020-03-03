@@ -2,27 +2,31 @@
 
 <img id="burgerPic" src="../img/burger.png">
 
-<ul>
-    <h2 id="toTheLeft">Burgers to be Devoured</h2>
+<ul class="toTheLeft">
+    <h2>Burgers to be Devoured</h2>
   {{#each burger}}
-    {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
+    {{#unless this.devoured}}
+    <li>
+    {{this.burger_name}}
+    	<button class="toBeDevoured" data-id="{{this.id}}">Devour it!</button>
+    </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<ul>
-    <h2 id="toTheRight">Devoured Burgers</h2>
-     {{#each burger}}
-    {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
+<ul class="toTheRight">
+    <h2>Devoured Burgers</h2>
+    {{#each burger}}
+    {{#if this.devoured}}
+    <li>
+        {{this.burger_name}}
+    </li>
     {{/if}}
   {{/each}}
 </ul>
 
 <h3 id="burgerAdd">Add a Burger</h3>
 <form class="create-form">
-
   <div class="form-group">
     <label for="burg"></label>
     <input type="text" id="burg" name="name">
