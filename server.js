@@ -1,22 +1,7 @@
 const exphbs = require("express-handlebars");
 const express = require("express");
-const mysql = require("mysql");
 
 const app = express();
-
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-    connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'ilovemusic3',
-        database: 'burgers_db'
-    });
-};
-
-connection.connect();
-module.exports = connection;
 
 // process.env.PORT lets the port be set by Heroku
 const PORT = process.env.PORT || 8080;
