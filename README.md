@@ -10,7 +10,7 @@ The app will store every burger in a database, whether it was 'devoured' or not.
 
 Technologies Used: MySQL, Node, Express, Handlebars, Bootstrap 4, HTML5, CSS3, and a homemade ORM.
 
-Song: "Burger Theme" by Melanie Rogoff
+Song: "Burger Theme" by Melanie Rogoff.
 
 **Deployed Link**: https://floating-gorge-77305.herokuapp.com/
 
