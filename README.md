@@ -8,4 +8,14 @@ Each burger in the waiting area has a *Devour It!* button. When the user clicks 
 
 The app will store every burger in a database, whether it was 'devoured' or not. 
 
-Technologies Used: MySQL, Node, Express, Handlebars and a homemade ORM.
+Technologies Used: MySQL, Node, Express, Handlebars, Bootstrap 4, HTML5, CSS3, and a homemade ORM.
+
+Song: "Burger Theme" by Melanie Rogoff
+
+**Deployed Link**: https://floating-gorge-77305.herokuapp.com/
+
+Screenshot: 
+
+![Demo](public/screenshot/demoipad.png)
+
+
