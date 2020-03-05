@@ -1,22 +1,21 @@
 <h1 id="title">Eat-Da-Burger!</h1>
 
 <img id="burgerPic" src="../img/burger.png">
-<div class="main">
 
-<ul class="toTheLeft">
-    <h2>Burgers to be Devoured</h2>
+<ul id="toTheLeft">
+    <h2 class="list-group">Burgers to be Devoured</h2>
   {{#each burger}}
     {{#unless this.devoured}}
     <li>
     {{this.burger_name}}
-    	<button class="toBeDevoured" data-id="{{this.id}}">Devour it!</button>
+    <button type="button" id="devourBtn" class="toBeDevoured btn btn-info btn-sm"data-id="{{this.id}}">Devour it!</button>
     </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<ul class="toTheRight">
-    <h2>Devoured Burgers</h2>
+<ul id="toTheRight">
+    <h2 class="list-group">Devoured Burgers</h2>
     {{#each burger}}
     {{#if this.devoured}}
     <li>
@@ -25,7 +24,6 @@
     {{/if}}
   {{/each}}
 </ul>
-</div>
 
 
 <h3 id="burgerAdd">Add a Burger</h3>
@@ -34,7 +32,8 @@
     <label for="burg"></label>
     <input type="text" id="burg" name="name">
   </div>
-  <button id="burgerBtn" type="submit">Submit</button>
+
+  <button class="btn btn-info" id="burgerBtn" type="submit">Submit</button>
 </form>
 
 <audio id="music" controls loop src=".../../music/theme.mp3"></audio> 

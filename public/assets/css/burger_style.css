@@ -1,47 +1,61 @@
-body {
-    background: pink;
-}
-
 #burgerPic {
     height: 110px;
     width: 110px;
-    margin-left: 520px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title {
     text-align: center;
 }
 
+body {
+    background: linear-gradient(to top, #ff33cc 0%, #ffff99 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*This ensures that the whole background is filled*/
+    background-size: cover; /*For this instance, background-size:cover needed the above code to work*/
+}
+
 ul {
     list-style: none;
 }
+
 #burgerBtn {  /*Submit button*/
-    margin-top: 20px;
-    margin-left: 550px;
+    display: block;
+    margin: auto;
 }
 
-.toTheRight { /*Devoured Burgers Area*/
+#toTheRight { /*Devoured Burgers Area*/
     text-align: right;
-    margin-right: 150px;
-    margin-top: -110px !important;
+    display: block;
+    margin-right: 20px;
+    margin-top: -150px;
 }
 
-.toTheLeft { /*Burgers To Be Devoured*/
+#toTheLeft { /*Burgers To Be Devoured*/
     text-align: left;
-    margin-top: -140px;
+    display: block;
+    margin-top: 90px;
 }
 
 #music {
-    margin-top: 50px;
-    margin-left: 420px;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
 }
 
 #burgerAdd { /*Add a Burger Text*/
-    margin-left: 520px;
-    margin-top: 100px;
+    text-align: center;
 }
 
-.form-group { /*The input box*/
-    margin-top: 20px;
-    margin-left: 520px !important;
+#burg { /*The input box*/
+    display: block;
+    margin: auto;
+}
+
+#devourBtn {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 12px;
 }
