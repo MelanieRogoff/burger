@@ -1,6 +1,6 @@
 # burger
 
-This is an app, titled: "Eat-Da-Burger!". It is a restaurant app that allows users to input names of burgers that they would like to eat. 
+This is responsive full-stack app, titled: "Eat-Da-Burger!". This app allows users to input names of burgers that they would like to eat. 
 
 When users submit burger names, the app will display a burger on the *left* side of the page. 
 
